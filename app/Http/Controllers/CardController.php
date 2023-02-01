@@ -80,7 +80,7 @@ class CardController extends Controller
         Card::create($input);
        
         return redirect()->route('cards.index')
-                        ->with('success','Card created successfully.');
+                        ->with('success','Carte créée avec succès.');
         // return url('storage/'.$input['photo']);
     }
 
@@ -139,7 +139,7 @@ class CardController extends Controller
         $card->update($input);
       
         return redirect()->route('cards.index')
-                        ->with('success','Card updated successfully');
+                        ->with('success','Carte mise à jour avec succès.');
     }
 
     /**
@@ -161,6 +161,6 @@ class CardController extends Controller
         $card->delete();
      
         return redirect()->route('cards.index')
-                        ->with('success','Card deleted successfully');
+                        ->with('success','Carte supprimée avec succès.');
     }
 }

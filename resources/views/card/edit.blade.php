@@ -128,11 +128,10 @@
 											<label for="tiktok">TikTok</label>
 											<input type="text" name="tiktok" class="form-control" value="{{ $card->tiktok }}" placeholder="tiktok">
 										</div>
-
-										<div class="checkbox">
+										<div class="col-sm-12 col-md-6 form-groupcheckbox">
 											<div class="custom-checkbox custom-control">
-												<input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1">
-												<label for="checkbox-1" class="custom-control-label mt-1">I agree</label>
+												<input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1" required>
+												<label for="checkbox-1" class="custom-control-label mt-1">J'accepte les termes et conditions !</label>
 											</div>
 										</div>
 									</div>

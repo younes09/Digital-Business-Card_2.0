@@ -5,17 +5,17 @@
 				<a class="desktop-logo logo-light active" href="{{ url('/' . $page='index') }}"><img src="{{URL::asset('assets/img/brand/logo.png')}}" class="main-logo" alt="logo"></a>
 				<a class="desktop-logo logo-dark active" href="{{ url('/' . $page='index') }}"><img src="{{URL::asset('assets/img/brand/logo-white.png')}}" class="main-logo dark-theme" alt="logo"></a>
 				<a class="logo-icon mobile-logo icon-light active" href="{{ url('/' . $page='index') }}"><img src="{{URL::asset('assets/img/brand/favicon.png')}}" class="logo-icon" alt="logo"></a>
-				<a class="logo-icon mobile-logo icon-dark active" href="{{ url('/' . $page='index') }}"><img src="{{URL::asset('assets/img/brand/favicon-white.png')}}" class="logo-icon dark-theme" alt="logo"></a>
+				{{-- <a class="logo-icon mobile-logo icon-dark active" href="{{ url('/' . $page='index') }}"><img src="{{URL::asset('assets/img/brand/favicon-white.png')}}" class="logo-icon dark-theme" alt="logo"></a> --}}
 			</div>
 			<div class="main-sidemenu">
 				<div class="app-sidebar__user clearfix">
 					<div class="dropdown user-pro-body">
 						<div class="">
-							<img alt="user-img" class="avatar avatar-xl brround" src="{{URL::asset('assets/img/faces/6.jpg')}}"><span class="avatar-status profile-status bg-green"></span>
+							<img alt="user-img" class="avatar avatar-xl brround" src="{{URL::asset('assets/img/faces/6.gif')}}"><span class="avatar-status profile-status bg-green"></span>
 						</div>
 						<div class="user-info">
 							<h4 class="font-weight-semibold mt-3 mb-0">{{ Auth::user()->name }}</h4>
-							<span class="mb-0 text-muted">Premium Member</span>
+							<span class="mb-0 text-muted">{{ Auth::user()->plan }} member</span>
 						</div>
 					</div>
 				</div>
@@ -38,7 +38,7 @@
 					
 				@endif
 				<ul class="side-menu">
-					<li class="side-item side-item-category">Main</li>
+					<li class="side-item side-item-category">Principal</li>
 					<li class="slide">
 						{{-- <a class="side-menu__item" href="{{ url('/' . $page='index') }}"> --}}
 							{{-- <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 24 24" >
@@ -53,14 +53,14 @@
 					<li class="slide">
 						<a class="side-menu__item" href="{{ route('cards.index') }}">
 							<i class="fas fa-id-card fa-lg mr-2"></i>
-							<span class="side-menu__label">Cards</span>
+							<span class="side-menu__label">Cartes</span>
 							{{-- <span class="badge badge-success side-badge">1</span> --}}
 						</a>
 					</li>
 					<li class="slide">
 						<a class="side-menu__item" href="{{ route('contacts.index') }}">
 							<i class="fas fa-users fa-lg mr-2"></i>
-							<span class="side-menu__label">Contact</span>
+							<span class="side-menu__label">Contacts</span>
 							{{-- <span class="badge badge-success side-badge">1</span> --}}
 						</a>
 					</li>

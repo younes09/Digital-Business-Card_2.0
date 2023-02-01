@@ -39,17 +39,17 @@
 @endsection
 @section('content')
 				@if ($message = Session::get('success'))
-				<div class="alert alert-success">
+				<div class="alert alert-success mt-4">
 					<p>{{ $message }}</p>
 				</div>
 				@endif
 				@if ($message = Session::get('error'))
-				<div class="alert alert-danger">
+				<div class="alert alert-danger mt-4">
 					<p>{{ $message }}</p>
 				</div>
 				@endif
 					{{-- search area --}}
-					<div class="row">
+					<div class="row mt-4">
 						<div class="col-md-4 col-sm-12">
 							<div class="card custom-card">
 								<form action="{{ route('contacts.index') }}" method="GET">
@@ -102,8 +102,8 @@
 					<div class="card mg-b-20 text-center col-xl-2 col-md-4 col-xs-12 m-3">
 						<div class="card-body">
 							<img src="{{URL::asset('assets/img/svgicons/no-data.svg')}}" alt="" class="wd-35p">
-							<h5 class="mg-b-10 mg-t-15 tx-18">Items Not Found</h5>
-							<a href="#" class="text-muted">Check The Settings</a>
+							<h5 class="mg-b-10 mg-t-15 tx-18">Éléments non trouvés</h5>
+							<a href="#" class="text-muted">Ajoutez des contacts pour les voir ici</a>
 						</div>
 					</div>
 					@endforelse

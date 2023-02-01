@@ -39,7 +39,7 @@
 @endsection
 @section('content')
                 @if (session('error'))
-				<div class="row" id="danger-alert">
+				<div class="row mt-4" id="danger-alert">
 					<div class="col-xl-6 col-md-12">
 						<div class="alert alert-danger" role="alert">
 							<h5><strong>{{ session('error') }}.</strong></h5>                        
@@ -48,7 +48,7 @@
 				</div>
 				@endif
                 @if (session('success'))
-				<div class="row" id="success-alert">
+				<div class="row mt-4" id="success-alert">
 					<div class="col-xl-6 col-md-12">
 						<div class="alert alert-success" role="alert">
 							<h5><strong>{{ session('success') }}.</strong></h5>                        
@@ -57,7 +57,7 @@
 				</div>
 				@endif
 				<!-- row -->
-				<div class="row">
+				<div class="row mt-4">
                     <div class="col-lg-8">
 						<div class="card">
 							<div class="card-body">

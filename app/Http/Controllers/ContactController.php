@@ -68,7 +68,7 @@ class ContactController extends Controller
             // test if its not my own card
             if($isMyCard){
                 return redirect()->route('cards.show',$request->card_id)
-                            ->with('error','It\'s your Card !');
+                            ->with('error','C\'est votre carte !');
             }else{ 
                 // else add to contact liste               
                 Contact::create([
@@ -76,11 +76,11 @@ class ContactController extends Controller
                     'card_id' => $request->card_id
                 ]);
                 return redirect()->route('contacts.index')
-                                ->with('success','Contacts inserted successfully');
+                                ->with('success','Contacts insérés avec succès');
             }          
         }else {
             return redirect()->route('contacts.index')
-                            ->with('error','Contacts already inserted !');
+                            ->with('error','Contacts déjà insérés !');
         }
 
     }

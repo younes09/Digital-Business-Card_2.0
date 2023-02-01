@@ -50,12 +50,12 @@
 @section('content')
 				{{-- notification handller --}}
 				@if ($message = Session::get('success'))
-				<div class="alert alert-success">
+				<div class="alert alert-success mt-4">
 					<p>{{ $message }}</p>
 				</div>
 				@endif
 				@if ($message = Session::get('free'))
-				<div class="alert alert-warning alert-dismissible fade show" role="alert">
+				<div class="alert alert-warning alert-dismissible fade show m-4" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 						<span class="sr-only">Close</span>
@@ -64,7 +64,7 @@
 				</div>
 				@endif
 				{{-- search area --}}
-				<div class="row">
+				<div class="row mt-4">
 					<div class="col-md-4 col-sm-12">
 						<div class="card custom-card">
 							<form action="{{ route('cards.index') }}" method="GET">
@@ -84,7 +84,7 @@
 
 				<!-- row -->
 				<div class="row">
-					<a href="{{ route('cards.create') }}" data-toggle="tooltip" data-placement="top" title="Add new Card" class="card col-xl-2 col-md-4 col-xs-12 border d-flex align-items-center justify-content-center m-3">
+					<a href="{{ route('cards.create') }}" data-toggle="tooltip" data-placement="top" title="Ajouter une nouvelle carte" class="card col-xl-2 col-md-4 col-xs-12 border d-flex align-items-center justify-content-center m-3">
 						<i class="fa fa-plus fa-5x" aria-hidden="true"></i>
 					</a>
 					@forelse ($cards as $card)
@@ -113,7 +113,7 @@
 									@csrf
 									@method('DELETE')
 									<div class="col-4">
-										<button type="submit" class="btn text-danger" data-toggle="tooltip" data-placement="top" title="Delet Card" onclick="return confirm('Are you sure you want to delete this card?');"><i class="fa fa-trash fa-1x" aria-hidden="true"></i></button>
+										<button type="submit" class="btn text-danger" data-toggle="tooltip" data-placement="top" title="Delet Card" onclick="return confirm('Voulez-vous vraiment supprimer cette carte ?');"><i class="fa fa-trash fa-1x" aria-hidden="true"></i></button>
 									</div>		
 								</form>
 							</div>
@@ -123,8 +123,8 @@
 						<div class="card mg-b-20 text-center col-xl-2 col-md-4 col-xs-12 m-3">
 							<div class="card-body">
 								<img src="{{URL::asset('assets/img/svgicons/no-data.svg')}}" alt="" class="wd-35p">
-								<h5 class="mg-b-10 mg-t-15 tx-18">Items Not Found</h5>
-								<a href="#" class="text-muted">Check The Settings</a>
+								<h5 class="mg-b-10 mg-t-15 tx-18">Éléments non trouvés</h5>
+								<a href="#" class="text-muted">Ajoutez des contacts pour les voir ici</a>
 							</div>
 						</div>
 					@endforelse

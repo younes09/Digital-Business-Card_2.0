@@ -49,7 +49,7 @@ class AdminController extends Controller
         $user->plan = $request->plan;
         $user->save();
 
-        return back()->with('success','User updated successfully ');
+        return back()->with('success','Utilisateur mis à jour avec succès ');
     }
 
     public function delet_user(User $user)

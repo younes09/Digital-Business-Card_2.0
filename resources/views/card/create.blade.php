@@ -41,12 +41,12 @@
 @endsection
 @section('content')
 				<!-- row -->
-				<div class="row d-flex align-items-center justify-content-center">
+				<div class="row d-flex align-items-center justify-content-center mt-4">
 					<div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
 						<div class="card  box-shadow-0 ">
 							<div class="card-header">
-								<h2 class="mb-1">Add card information</h2>
-								<h5 class="mb-2 bg-danger text-white">Each of the fields below is not shown in the card if it is empty!</h5>
+								<h2 class="mb-1">Ajouter des informations sur la carte</h2>
+								<h5 class="mb-2 bg-danger text-white">Chacun des champs ci-dessous n'est pas affiché dans la carte s'il est vide !</h5>
 							</div>
 							<div class="card-body pt-0">
 								<form action="{{ route('cards.store') }}" method="post" enctype="multipart/form-data">
@@ -66,11 +66,11 @@
 											</div>
 										</div>
 										<div class="col-sm-12 col-md-6 form-group">
-											<label for="name">Name</label>
+											<label for="name">Nom</label>
 											<input type="text"  name="name" class="form-control" placeholder="name">
 										</div>
 										<div class="col-sm-12 col-md-6 form-group">
-											<label for="famly_name">Famly Name</label>
+											<label for="famly_name">Nom de famille</label>
 											<input type="text"  name="famly_name" class="form-control" placeholder="famly name">
 										</div>
 										<div class="col-sm-12 col-md-6 form-group">
@@ -78,7 +78,7 @@
 											<input type="email"  name="email" class="form-control" placeholder="email">
 										</div>
 										<div class="col-sm-12 col-md-6 form-group">
-											<label for="phone">Phone</label>
+											<label for="phone">Téléphone</label>
 											<input type="tel" name="phone" class="form-control" maxlength="10" placeholder="phone">										
 										</div>
 										<div class="col-sm-12 col-md-6 form-group">
@@ -98,11 +98,11 @@
 											<input type="text" name="poste" class="form-control" placeholder="poste">
 										</div>
 										<div class="col-sm-12 col-md-6 form-group">
-											<label for="socite">Company</label>
+											<label for="socite">Société</label>
 											<input type="text" name="socite" class="form-control" placeholder="socite">
 										</div>
 										<div class="col-sm-12 col-md-6 form-group">
-											<label for="website">Website</label>
+											<label for="website">Site Internet</label>
 											<input type="text" name="website" class="form-control" placeholder="website">
 										</div>
 										<div class="col-12 form-group">
@@ -111,7 +111,7 @@
 										</div>
 									</div>
 									<div class="row">
-										<h4 class="col-12 form-group mt-5">Social Media</h4>
+										<h4 class="col-12 form-group mt-5">Réseaux sociaux</h4>
 										<div class="col-sm-12 col-md-6 form-group">
 											<label for="fb">Facebook</label>
 											<input type="text" name="fb" class="form-control" placeholder="fb">
@@ -132,11 +132,11 @@
 										<div class="col-sm-12 col-md-6 form-groupcheckbox">
 											<div class="custom-checkbox custom-control">
 												<input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1" required>
-												<label for="checkbox-1" class="custom-control-label mt-1">I agree to the terms and conditions !</label>
+												<label for="checkbox-1" class="custom-control-label mt-1">J'accepte les termes et conditions !</label>
 											</div>
 										</div>
 									</div>
-									<button type="submit" class="btn btn-primary mt-3 mb-0">Submit</button>
+									<button type="submit" class="btn btn-primary mt-3 mb-0">Envoyer</button>
 								</form>
 							</div>
 						</div>
