@@ -44,16 +44,30 @@
 				<!-- breadcrumb -->
 @endsection
 @section('content')
+				@if (session('message'))
+				<div class="row mt-4">
+					<div class="col-xl-4 col-md-6 col-sm-12">
+						<div class="alert alert-success alert-dismissible fade show" role="alert">
+						<span class="alert-inner--icon"><i class="fe fe-thumbs-up"></i></span>
+						<span class="alert-inner--text"><strong>Success!</strong> User Deleted!</span>
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					</div>
+				</div>
+					
+				@endif
+				
 				<!-- row -->
-				<div class="row">
+				<div class="row mt-4">
 					<div class="col-xl-12">
 						<div class="card">
 							<div class="card-header pb-0">
 								<div class="d-flex justify-content-between">
-									<h4 class="card-title mg-b-0">SIMPLE TABLE</h4>
+									<h4 class="card-title mg-b-0">USERS TABLE</h4>
 									<i class="mdi mdi-dots-horizontal text-gray"></i>
 								</div>
-								<p class="tx-12 tx-gray-500 mb-2">Example of Valex Simple Table. <a href="">Learn more</a></p>
 							</div>
 							<div class="card-body">
 								<div class="table-responsive">

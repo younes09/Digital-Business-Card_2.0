@@ -5,6 +5,7 @@ use App\Http\Controllers\CardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\VCardController;
+use App\Http\Controllers\GustController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('scfg/{id}', GustController::class)->name('showCardForGust');
 
 Auth::routes(['verify' => true]);
 
@@ -42,4 +45,4 @@ Route::get('/deletUser/{user}', [AdminController::class,'delet_user'])->name('us
 Route::get('/editUser/{user}', [AdminController::class,'edit_user'])->name('user.edit');
 Route::post('/updateUserPlan/{user}', [AdminController::class,'update_user_plan'])->name('user.update');
 
-Route::resource('/{page}', AdminController::class);
+// Route::resource('/{page}', AdminController::class);

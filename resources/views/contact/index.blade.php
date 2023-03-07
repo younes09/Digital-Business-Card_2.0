@@ -73,7 +73,7 @@
 						@if ($contactCard->photo == null)
 						<img class="card-img-top mt-2" src="{{ url('assets/img/placeholder-image.jpg') }}" alt="Card image cap">														
 						@else
-						<img class="card-img-top mt-2" src="{{ url('storage/'.$contactCard->photo) }}" alt="Card image cap">							
+						<img class="card-img-top mt-2" src="{{ url('images/'.$contactCard->photo) }}" alt="Card image cap">							
 						@endif
 						<div class="card-body">
 							<h4 class="card-title">Mr.{{ $contactCard->name }} {{ $contactCard->famly_name }}</h4>

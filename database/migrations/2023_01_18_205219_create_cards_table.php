@@ -34,7 +34,7 @@ return new class extends Migration
             $table->string('insta')->nullable();
             $table->string('youtube')->nullable();
             $table->string('tiktok')->nullable();
-            $table->foreignId('user_id')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

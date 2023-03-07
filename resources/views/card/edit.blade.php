@@ -45,8 +45,8 @@
 					<div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
 						<div class="card  box-shadow-0 ">
 							<div class="card-header">
-								<h2 class="mb-1">إضافة معلومات البطاقة</h2>
-								<h5 class="mb-2 bg-danger text-white">أي مجال من المجالات أدناه لا يتم إضهاره في البطاقة إن كان فارغ !</h5>
+								<h2 class="mb-1">Ajouter des informations sur la carte</h2>
+								<h5 class="mb-2 bg-danger text-white">Chacun des champs ci-dessous n'est pas affiché dans la carte s'il est vide !</h5>
 							</div>
 							<div class="card-body pt-0">
 								<form action="{{ route('cards.update',$card->id) }}" method="POST" enctype="multipart/form-data">

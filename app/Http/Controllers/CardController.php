@@ -67,7 +67,7 @@ class CardController extends Controller
             // test if user has upload an image
             if($request->hasFile($photo)){
                 // change request ipute value
-                $input[$photo] = $request->file($photo)->store($photo,'public');
+                $input[$photo] = $request->file($photo)->store($photo,'save');
             }else{
                 // remove images from the request
                 unset($input[$photo]);

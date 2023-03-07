@@ -51,7 +51,7 @@
         <div class="row justify-content-center align-items-center">
             <div class="col-12 col-md-6 col-xl-4">
                 <div class="card" style="box-shadow: 0px 4px 20px 0px;">
-                    <div class="card"><img class="card-img-top w-100 d-block" src="{{ url('storage/'.$card->photo) }}" style="border-radius: 5px 5px 0px 100px;">
+                    <div class="card"><img class="card-img-top w-100 d-block" src="{{ url('images/'.$card->photo) }}" style="border-radius: 5px 5px 0px 100px;">
                         <div class="card-body">
                             <div class="row text-center my-5">
                                 <div class="col"><a class="btn btn-secondary" href="tel:{{ $card->phone }}" style="border-radius: 37px;padding: 12px;box-shadow: 5px 3px 13px #000000;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-telephone fs-1">
@@ -71,7 +71,7 @@
                                     <h4>Mr. {{ $card->name }} {{ $card->famly_name }}</h4>
                                     <h6 style="color: rgba(33,37,41,0.65);">{{ $card->poste }}</h6>
                                 </div>
-                                <div class="col-4"><img class="img-fluid" src="{{ url('storage/'.$card->logo) }}"></div>
+                                <div class="col-4"><img class="img-fluid" src="{{ url('images/'.$card->logo) }}"></div>
                             </div>
                             <div class="row mt-5">
                                 <div class="col-12">
@@ -202,9 +202,10 @@
 
         window.onload = function (){
             // console.log('onload');
+            let url = "{{ 'http://10.0.1.200/Digital-Business-Card_2.0/public/scfg/'.$card->id }}";
             let qrcode = new QRCode(document.getElementById("qrcode"),
                 {
-                    text: "{{ 'http://10.0.1.200/vbc-v2/public/cards/'.$card->id }}",
+                    text: url,
                     width: 250,
                     height: 250,
                     margin : 25,

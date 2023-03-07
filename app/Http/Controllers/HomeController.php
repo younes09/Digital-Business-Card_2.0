@@ -135,6 +135,6 @@ class HomeController extends Controller
 
         $user->delete();
         
-        return redirect('/home')->with('message','Deleted succss !');
+        return back()->with('message','Deleted succss !');
     }
 }
